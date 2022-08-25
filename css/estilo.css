@@ -1,0 +1,113 @@
+/*INDEX*/
+li{list-style-type: none; padding: 10px; margin: 10px;}
+a{text-decoration: none;}
+ul{ display: flex; justify-content: flex-end;}
+nav{ width: 100%;}
+*{margin: 0; padding: 0;}
+.gridIndex{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+header{grid-area: header; display: flex; position: sticky; top: 0; background-color: aliceblue; font-size: 20px; display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main{grid-area: main;}
+footer{grid-area: footer; display: flex; justify-content: space-around; color: rgb(255, 255, 255);
+    flex-direction: row; background-color: black; padding: 20px;
+}
+.inicio{ background-image: url(../assets/img/fondosi.webp);  padding: 200px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px; background-size: cover;
+}
+.lorems{    background-color: aliceblue;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 100px;
+}
+.loremFoto{background-image: url(../assets/img/fondocafe2.jpg); padding: 70px; background-position-y: 70%; color: white
+    ;}
+
+/*MEDIAQUERIE INDEX*/
+@media  screen and (max-width: 768px){
+    header{ position:static; }
+    footer{ flex-direction: column;}
+    .inicio{ padding: 100px;}
+    .liIndex{display: flex; flex-wrap: wrap;}
+    .lorems{padding: 70px;}
+}
+
+/*NOSOTROS*/
+.gridNosotros{
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100% ;
+    grid-template-rows: auto auto auto ;
+}
+header{grid-area: header;}
+main{grid-area: main;}
+footer{grid-area: footer;}
+.navNos{justify-content: flex-end;}
+.imgsNos img{display: inline-block; width: 440px; height:360px;  flex-flow:wrap;  }
+.imgsNos{display: flex; justify-content: space-around;}
+.loremNos {padding: 100px;}
+.encabezadoNos{padding: 50px;}
+
+
+/*UBICACION*/
+.gridUbicacion{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "encabezadoUbi"
+    "bloqueUbi"
+    "mapaUbi"
+    "formUbi"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+header{grid-area: header;}
+.encabezadoUbi{grid-area: encabezadoUbi; text-align: center; margin: 20px;}
+.bloqueUbi{grid-area: bloqueUbi;}
+.mapaUbi iframe{grid-area: mapaUbi; margin: 5px; height: 100%; width: 100%; position: relative;}
+.formUbi{grid-area: formUbi; padding: 60px; background-color: aliceblue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 17px;}
+footer{grid-area: footer;}
+
+/*BLOQUE UBICACION*/
+.bloqueUbi{
+    background-color: rgb(2, 2, 45); color: blanchedalmond; align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "imgUbi textoUbi";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+.imgUbi{grid-area: imgUbi;}
+.textoUbi{grid-area: textoUbi; text-align: center; display:grid; grid-row-gap: 30px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 17px;}
+
+/*MEDIAQUERIE UBICACION*/
+@media  screen and (max-width: 768px){
+    .bloqueUbi{
+        display: grid;
+        grid-template-areas: 
+        "imgUbi"
+        "textoUbi";
+        grid-template-columns: 100%; grid-template-rows: auto auto;
+    }
+    .textoUbi{ margin: 10px;}
+    .imgUbi img{width: 100%;}
+    .mapaUbi iframe{left: 0; top: 0; height: 100%; width: 100%; position: relative;}
+    .formUbi textarea{width: 100%;}
+    footer{ flex-direction: column; text-align: center;}
+}
