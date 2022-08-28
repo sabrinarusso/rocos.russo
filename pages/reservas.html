@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <title>Rocos</title>
 </head>
-<body>
+<body class="gridReservas">
     <header>
-        <div>
+        <div class="imgLogo">
             <a href="../index.html"> <img src="../assets/img/loggo.png" alt="logo pagina web"></a>
         </div>
         <nav>
-            <ul>
+            <ul class="liIndex">
                 <li> <a href="../index.html">INICIO</a></li>
                 <li> <a href="nosotros.html">NOSOTROS</a></li>
                 <li> <a href="menu.html">MENU</a></li>
@@ -23,34 +23,46 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>RESERVAS</h1>
-        <form action="" class="mainReservas">
-            <label for="nombre">Nombre: <br>
-                <textarea name="nombre" id="nombre" cols="30" rows="2"></textarea>
-            </label> <br>
-            <label for="999 999 999">Telefono: <br>
-                <textarea placeholder="999 999 999"></textarea>
-            </label>
-            <div>Cantidad de personas</div>
-            <input type="number" name="cantidad de personas" value="1">
-            <div> Fecha</div>
-            <input type="date" name="fecha" id=""fecha>
-            <p>
+    <div class="encabezadoRes">
+        <h1>RESERVAS</h1> 
+    </div>
+    <div class="fondoForm"> 
+        <form action=""  class="mainReservas">
+            <div class="divResa"> 
+                <label for="nombre" >Nombre: <br>
+                    <textarea name="nombre" id="nombre" cols="30" rows="2"></textarea>
+                </label> <br>
+            </div>
+            <div class="divResb" >
+                <label for="999 999 999">Telefono: <br>
+                    <textarea placeholder="999 999 999"></textarea>
+                </label>
+            </div>
+            <div class="divResc">
+                <div>Cantidad de personas</div>
+                <input type="number" name="cantidad de personas" value="1">
+            </div>
+            <div class="divResd"> 
+                <div> Fecha </div>
+                <input type="date" name="fecha" id=""fecha>
+            </div>
+            <div class="divRese">
                 <label for="hora">Hora</label>
                 <input type="time" name="hora" id="hora">
-            </p>
-            <label for="email">Correo electronico:
-                <input type="email" placeholder="aaa@gmail.com" name="email" id="">
-            </label> <br>
-            <div>Algo que agregar: </div>
-            <textarea name="mensaje" id="" cols="30" rows="4"></textarea>
-            <input type="submit" value="ENVIAR">
-            <input type="reset" value="RESETEAR">
-
+            </div>
+            <div class="divResf">
+                <label for="email">Correo electronico:
+                    <input type="email" placeholder="aaa@gmail.com" name="email" id="">
+                </label> 
+            </div>
+            <div class="divResg">
+                <div> Algo que agregar: </div>
+                <textarea name="mensaje" id="" cols="30" rows="5"></textarea>
+                <input type="submit" value="ENVIAR">
+                <input type="reset" value="RESETEAR">
+            </div>
         </form>
-
-    </main>
+    </div>
     <hr>
     <footer>
         <div>

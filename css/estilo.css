@@ -3,6 +3,7 @@ li{list-style-type: none; padding: 10px; margin: 10px;}
 a{text-decoration: none;}
 ul{ display: flex; justify-content: flex-end;}
 nav{ width: 100%;}
+.imgLogo img{ padding: 5px; border-radius: 150px;}
 *{margin: 0; padding: 0;}
 .gridIndex{
     text-align: center;
@@ -36,33 +37,12 @@ footer{grid-area: footer; display: flex; justify-content: space-around; color: r
 
 /*MEDIAQUERIE INDEX*/
 @media  screen and (max-width: 768px){
-    header{ position:static; }
+    header{ position:static;}
     footer{ flex-direction: column;}
     .inicio{ padding: 100px;}
     .liIndex{display: flex; flex-wrap: wrap;}
     .lorems{padding: 70px;}
 }
-
-/*NOSOTROS*/
-.gridNosotros{
-    text-align: center;
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-columns: 100% ;
-    grid-template-rows: auto auto auto ;
-}
-header{grid-area: header;}
-main{grid-area: main;}
-footer{grid-area: footer;}
-.navNos{justify-content: flex-end;}
-.imgsNos img{display: inline-block; width: 440px; height:360px;  flex-flow:wrap;  }
-.imgsNos{display: flex; justify-content: space-around;}
-.loremNos {padding: 100px;}
-.encabezadoNos{padding: 50px;}
-
 
 /*UBICACION*/
 .gridUbicacion{
@@ -107,7 +87,168 @@ footer{grid-area: footer;}
     }
     .textoUbi{ margin: 10px;}
     .imgUbi img{width: 100%;}
-    .mapaUbi iframe{left: 0; top: 0; height: 100%; width: 100%; position: relative;}
+    .mapaUbi iframe{margin: 0; margin-top: 10px; left: 0; top: 0; height: 100%; width: 100%; position: relative;}
     .formUbi textarea{width: 100%;}
     footer{ flex-direction: column; text-align: center;}
+}
+/*NOSOTROS*/
+.gridNosotros{
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "encabezadoNos"
+    "imgsNos"
+    "loremNos"
+    "footer";
+    grid-template-columns: 100% ;
+    grid-template-rows: repeat(5, auto) ;
+}
+header{grid-area: header;}
+.encabezadoNos{grid-area: encabezadoNos; padding: 50px;}
+.imgsNos{grid-area: imgsNos;}
+.loremNos{grid-area: loremNos;}
+footer{grid-area: footer;}
+.navNos{justify-content: flex-end;}
+.imgNosa img, .imgNosb img, .imgNosc img{width: 350px; height:360px; }
+.imgsNos{display: flex; justify-content: center ;}
+.loremNos {padding: 100px;}
+/*IMGSNOS BLOQUE GRID*/
+.imgsNos{
+    display: grid;
+    grid-template-areas:  
+    "imgNosa imgNosb imgNosc";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.imgNosa{grid-area: imgNosa;}
+.imgNosb{grid-area: imgNosb;}
+.imgNosc{grid-area: imgNosc;}
+/*NOSOTROS MEDIAQUERIE */
+@media  screen and (max-width: 768px) {
+    .imgsNos {
+        display: grid;
+        grid-template-areas: 
+        "imgNosa"
+        "imgNosb"
+        "imgNosc";
+        grid-template-columns:100% ;
+        grid-template-rows:repeat(3, auto) ;
+    }
+    .imgNosa{grid-area: imgNosa;}
+    .imgNosb{grid-area: imgNosb;}
+    .imgNosc{grid-area: imgNosc;}
+    .loremNos{padding: 75px;}
+}
+
+/*MENU*/
+.menuGrid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "encabezadoMenu"
+    "tablaMenu"
+    "imgsMenu"
+    "menuLorem"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, auto);
+}
+header{grid-area: header;}
+.encabezadoMenu{grid-area: encabezadoMenu; text-align: center; margin: 20px;}
+.tablaMenu{grid-area: tablaMenu;}
+.imgsMenu{grid-area: imgsMenu;}
+.menuLorem{grid-area: menuLorem; padding: 100px; text-align: center; margin: 10px;}
+footer{grid-area: footer;}
+/*IMAGENES MENU*/
+.imgsMenu{
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "imgMenua imgMenub imgMenuc imgMenud";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+.imgsMenu img{width: 250px; height: 200px;} 
+.imgMenua {grid-area: imgMenua;}
+.imgMenub {grid-area: imgMenub;  padding: 0; margin: 0; border: 0;}
+.imgMenuc {grid-area: imgMenuc;  padding: 0; margin: 0; border: 0;}
+.imgMenud{grid-area: imgMenud;}
+/*MEDIAQUERIE MENU*/
+@media  screen and (max-width: 768px){
+.imgsMenu{
+    display: grid;
+    grid-template-areas:  
+    "imgMenua imgMenub"
+    "imgMenuc imgMenud";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+.imgMenua{grid-area: imgMenua}
+.imgMenub{grid-area: imgMenub;}
+.imgMenuc{grid-area: imgMenuc;}
+.imgMenud{grid-area: imgMenud;}
+.imgsMenu img{width: 180px; height: 180px;}
+}
+/*RESERVAS*/
+.gridReservas{
+    display: grid;
+    grid-template-areas:  
+    "header"
+    "encabezadoRes"
+    "mainReservas"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4. auto);
+}
+header{grid-area: header;}
+.encabezadoRes{grid-area: encabezadoRes; text-align: center; padding: 20px;}
+.mainReservas{grid-area: mainReservas;}
+footer{grid-area: footer;}
+
+/*CUESTIONARIO RESERVAS*/ 
+.mainReservas{
+    display: grid;
+    grid-template-areas:  
+    "divResa divResb"
+    "divResc divResd"
+    "divRese divResf"
+    "divResg none";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    font-family:initial;
+    font-size: 20px;
+    text-align:justify;
+}
+.divResa{grid-area: divResa; padding: 20px; display: block;}
+.divResb{grid-area: divResb; padding: 20px; display: block;}
+.divResc{grid-area: divResc; padding: 20px; display: block;}
+.divResd{grid-area: divResd; padding: 20px; display: block;}
+.divRese{grid-area: divRese; padding: 20px; display: block;}
+.divResf{grid-area: divResf; padding: 20px; display: block;}
+.divResg{grid-area: divResg; padding: 20px; display: block;}
+.fondoForm{  margin: 30px; margin-top: 0px; padding: 10px;  background-image: url(../assets/img/cafeteria.webp); }
+/*MEDIAQUERIE RESERVAS*/
+@media  screen and (max-width: 768px) {
+    .mainReservas{
+        display: grid;
+        grid-template-areas:  
+        "divResa"
+        "divResb"
+        "divResc"
+        "divResd"
+        "divRese"
+        "divResf"
+        "divResg";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, auto);
+    }
+    .divResa{grid-area: divResa;}
+    .divResb{grid-area: divResb;}
+    .divResc{grid-area: divResc;}
+    .divResd{grid-area: divResd;}
+    .divRese{grid-area: divRese;}
+    .divResg{grid-area: divResg; }
+    .divResf{grid-area: divResf;}
+    .fondoForm{margin: 10px; margin-top: 0px;}
 }
