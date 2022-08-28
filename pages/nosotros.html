@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/img/favicon.png">
-    <title>Rocos - nosotros</title>
     <link rel="stylesheet" href="../css/estilo.css">
+    <title>Rocos - nosotros</title>
+    
 </head>
 <body class="gridNosotros">
-    <header>
+    <header class="headerNos">
         <div class="imgLogo">
             <a href="../index.html"> <img src="../assets/img/loggo.png" alt="logo pagina web"></a>
         </div>
@@ -27,9 +29,9 @@
         <h1>NOSOTROS</h1>
     </div>
     <div class="imgsNos">
-        <div class="imgNosa"><img src="../assets/img/cafeteria.webp" alt="tostadas"></div>
-        <div class="imgNosb"><img src="../assets/img/ensalada.png" alt="ensalada" ></div>
-        <div class="imgNosc"><img src="../assets/img/pet.jpg" alt="pet" ></div>
+        <div class="imgNosa" data-aos="fade-left"  data-aos-duration="1000"><img src="../assets/img/cafeteria.webp" alt="tostadas"></div>
+        <div class="imgNosb" data-aos="fade-left"  data-aos-duration="2000"><img src="../assets/img/ensalada.png" alt="ensalada" ></div>
+        <div class="imgNosc"data-aos="fade-left"  data-aos-duration="3000" ><img src="../assets/img/pet.jpg" alt="pet" ></div>
     </div>
     <div class="loremNos">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos, voluptates esse dolores molestiae praesentium blanditiis itaque ut quod ullam vero, corporis nesciunt odit quibusdam odio molestias similique consequatur eius. Quos asperiores ipsum amet quae ut aspernatur architecto beatae officiis alias distinctio. Quisquam sequi illo obcaecati officiis iusto perspiciatis quis reprehenderit error.</p>
@@ -45,5 +47,9 @@
             <p>CONTACTO</p>
         </div>
     </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
 </body>
 </html>

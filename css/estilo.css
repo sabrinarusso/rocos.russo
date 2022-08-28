@@ -104,7 +104,7 @@ footer{grid-area: footer;}
     grid-template-columns: 100% ;
     grid-template-rows: repeat(5, auto) ;
 }
-header{grid-area: header;}
+.headerNos{grid-area: header; position: static;}
 .encabezadoNos{grid-area: encabezadoNos; padding: 50px;}
 .imgsNos{grid-area: imgsNos;}
 .loremNos{grid-area: loremNos;}
