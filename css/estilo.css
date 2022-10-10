@@ -132,8 +132,8 @@ footer{grid-area: footer;}
         "imgNosa"
         "imgNosb"
         "imgNosc";
-        grid-template-columns:100% ;
-        grid-template-rows:repeat(3, auto) ;
+        grid-template-columns: 100%;
+        grid-template-rows:repeat(3, auto);
     }
     .imgNosa{grid-area: imgNosa;}
     .imgNosb{grid-area: imgNosb;}
@@ -156,7 +156,7 @@ footer{grid-area: footer;}
 }
 header{grid-area: header;}
 .encabezadoMenu{grid-area: encabezadoMenu; text-align: center; margin: 20px;}
-.tablaMenu{grid-area: tablaMenu;}
+.tablaMenu{grid-area: tablaMenu; border: 10px; padding: 10px;}
 .imgsMenu{grid-area: imgsMenu;}
 .menuLorem{grid-area: menuLorem; padding: 100px; text-align: center; margin: 10px;}
 footer{grid-area: footer;}
@@ -168,12 +168,13 @@ footer{grid-area: footer;}
     "imgMenua imgMenub imgMenuc imgMenud";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
+    text-align: center;
 }
 .imgsMenu img{width: 250px; height: 200px;} 
-.imgMenua {grid-area: imgMenua;}
+.imgMenua {grid-area: imgMenua;  padding: 3px;}
 .imgMenub {grid-area: imgMenub;  padding: 0; margin: 0; border: 0;}
 .imgMenuc {grid-area: imgMenuc;  padding: 0; margin: 0; border: 0;}
-.imgMenud{grid-area: imgMenud;}
+.imgMenud{grid-area: imgMenud; padding: 0; border: 0;}
 /*MEDIAQUERIE MENU*/
 @media  screen and (max-width: 768px){
 .imgsMenu{
